@@ -13,21 +13,21 @@ def main():
         print(png)
         image = cv2.imread(png)
         returnImage =preProcessing(image)
-        cv2.imshow(f'After Pre-processing form the Main file ${png}',returnImage)
+        cv2.imshow(f'After Processed Image ${png}',returnImage)
         cv2.waitKey()
     # JPG Images
     for jpg in jpgImages:
         print(jpg)
         image = cv2.imread(jpg)
         returnImage = preProcessing(image)
-        cv2.imshow(f'After Pre-processing form the Main file ${jpg}', returnImage)
+        cv2.imshow(f'After Processed Image ${jpg}', returnImage)
         cv2.waitKey()
     #JPEG images
     for ejpg in EjpgImages:
         print(ejpg)
         image = cv2.imread(ejpg)
         returnImage = preProcessing(image)
-        cv2.imshow(f'After Pre-processing form the Main file ${ejpg}', returnImage)
+        cv2.imshow(f'After Processed Image ${ejpg}', returnImage)
         cv2.waitKey()
 
 main()

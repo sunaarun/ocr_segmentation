@@ -4,7 +4,11 @@ import cv2
 
 def preProcessing(myImage):
     grayImg = cv2.cvtColor(myImage, cv2.COLOR_BGR2GRAY)
+    # cv2.imshow('Gray Image', grayImg)
+    # cv2.waitKey()
     ret, thresh1 = cv2.threshold(grayImg, 0, 255, cv2.THRESH_OTSU | cv2.THRESH_BINARY_INV)
+    # cv2.imshow('After threshold', thresh1)
+    # cv2.waitKey()
     print(f'The threshold valua applied to the image is: {ret} ')
     horizontal_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (18, 18))
     dilation = cv2.dilate(thresh1, horizontal_kernel, iterations=1)
